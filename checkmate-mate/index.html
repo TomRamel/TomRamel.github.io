@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkmate Mate — chess game analysis for Android</title>
+<meta name="description" content="Checkmate Mate analyses your chess games on your Android phone with Stockfish 18.">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #eceee8; --card: #f8f8f4; --border: #c9ccc4; --text: #14161a; --dim: #4a4f4a;
+    --accent: #7d5f14; --accent-ink: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181b; --card: #1d2126; --border: #394047; --text: #eceef0; --dim: #a7afb6;
+      --accent: #c99b3f; --accent-ink: #15181b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--accent); }
+  .top { background: var(--card); border-bottom: 1px solid var(--border); }
+  .top-in, main, .foot { max-width: 760px; margin: 0 auto; padding-inline: 20px; }
+  .top-in { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--text); font-weight: 600; text-decoration: none; }
+  .brand img { width: 32px; height: 32px; border-radius: 6px; }
+  main { padding-block: 28px 48px; }
+  h1 { margin: 0 0 12px; font-size: 1.75rem; line-height: 1.25; }
+  h2 { margin: 2rem 0 .6rem; padding-top: 1.4rem; border-top: 1px solid var(--border); font-size: 1.2rem; line-height: 1.3; }
+  h3 { margin: 1.4rem 0 .4rem; font-size: 1rem; }
+  p, ul { margin: 0 0 1rem; }
+  ul { padding-inline-start: 1.3rem; }
+  li { margin-bottom: .4rem; }
+  .foot { padding-block: 20px 32px; border-top: 1px solid var(--border); color: var(--dim); font-size: 14px; }
+  .hero { display: flex; align-items: center; gap: 18px; }
+  .hero img { width: 88px; height: 88px; border-radius: 12px; flex: none; }
+  .hero h1 { margin: 0 0 4px; }
+  .hero p { margin: 0; color: var(--dim); }
+  .lead { margin: 20px 0 0; }
+  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 24px 0 0; padding: 0; list-style: none; }
+  .card { margin: 0; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .card h2 { margin: 0 0 6px; padding: 0; border: 0; font-size: 1.05rem; }
+  .card p { margin: 0 0 12px; color: var(--dim); font-size: 15px; }
+  .card .hero img { width: 56px; height: 56px; }
+  .card .hero { margin-bottom: 12px; }
+  .card .hero h2 { margin: 0; }
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--border); border-radius: 6px; color: var(--text); text-decoration: none; font-size: 15px; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in"><a class="brand" href="../">Tom Ramel — Apps</a></div></header>
+<main>
+<div class="hero">
+  <img src="icon.png" alt="" width="88" height="88">
+  <div>
+    <h1>Checkmate Mate</h1>
+    <p>Chess game analysis for Android</p>
+  </div>
+</div>
+<p class="lead">Analyse your games on your phone with Stockfish 18, even offline. Import them from Chess.com and
+Lichess, see every move rated, replay your mistakes as exercises, and follow your progress. Available in 29 languages.</p>
+
+<ul class="cards">
+  <li class="card">
+    <h2>Privacy policy</h2>
+    <p>What stays on your phone, and what the app sends to other services.</p>
+    <div class="btns">
+      <a class="btn primary" href="privacy-en.html">English</a>
+      <a class="btn" href="privacy-fr.html" lang="fr">Français</a>
+    </div>
+  </li>
+  <li class="card">
+    <h2>Chess engine</h2>
+    <p>Stockfish 18, free software under the GNU GPL version 3, compiled without any modification.</p>
+    <div class="btns">
+      <a class="btn" href="https://github.com/official-stockfish/Stockfish/tree/sf_18">Source code</a>
+      <a class="btn" href="build-stockfish-android.sh">Build script</a>
+      <a class="btn" href="COPYING">Licence</a>
+    </div>
+  </li>
+</ul>
+</main>
+<footer class="foot">Checkmate Mate · <a href="mailto:tom.ramel.dev@gmail.com">tom.ramel.dev@gmail.com</a></footer>
+</body>
+</html>
